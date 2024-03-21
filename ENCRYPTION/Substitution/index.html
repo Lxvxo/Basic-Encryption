@@ -1,0 +1,70 @@
+<!-- coding: utf-8  -->
+
+<!-- Auteur : Zodiac
+Date : 24/11/2022
+Objectif générale : Chiffrer ou Déchiffrer un message par Substitution
+Objectif du fichier : 
+ -->
+<!--BEGINNING-->
+<!DOCTYPE html>
+
+<html lg="en">
+
+<head>
+    <!-- Définit les paramètres globaux de la page HTML -->
+    <meta charset="utf-8">
+    <title>Chiffrement par Substitution</title>
+    <script src="substitution.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section class="layout">
+        <!-- Définit une grille pour structurer la page -->
+        <div class="header">
+            <!-- 1er élément pour stocker le titre (en-tête) -->
+            <h1>SUBSTITUTION</h1>
+        </div>
+
+        <div class="contain">
+            <!-- 2ème élément pour stocker le texte et notre boutton  -->
+            <div class=containt>
+                <input class="insert" onchange="Substitution()" id="text" type="text"
+                    placeholder="Insert a text for cipher...">
+                <br>
+                <p hidden id="text_crypte"></p>
+                <br>
+                <button id="change_key" onclick="Generate_key()">Generate a new key</button>
+                <button id="show_key" onclick="Show_key()">Show Key</button>
+                <button id="hide_key" onclick="Hide_key()">Hide Key</button>
+                <br><br>
+                <input hidden id="key" class="insert" onchange="Change_key_manuel()" id="text" type="text"
+                    placeholder="Insert a key for cipher...">
+                <br>
+                <div class="Cesar">
+                    <label for="cesar">Show if the key is a Cesar's key</label>
+                    <input onchange="Check_cesar()" id="check_cesar" name="cesar" type="checkbox">
+
+                </div>
+                <p hidden="true" id="cesar"></p>
+                <br><br>
+
+                <input class="insert" id="text_2" type="text" placeholder="Insert a text for decipher...">
+                <input class="insert" id="key_2" type="text" placeholder="Insert a key for decipher...">
+                <br>
+                <p hidden id="text_decrypte"></p>
+                <br>
+                <button id="dechiffrer" onclick="Dechiffrement()">Click for decipher</button>
+
+            </div>
+        </div>
+        <div class="footer">
+            <!-- 3ème élément pour stocker le nom de l'auteur (pied de page) -->
+            <span id="Author">Zodiac</span>
+            <span id="Date">24/11/2022</span>
+        </div>
+    </section>
+</body>
+
+</html>
+<!--END-->
